@@ -1,17 +1,43 @@
 <script setup>
-import { useStorage } from '@/composables/useStorage.js'
-
-let food = useStorage('food');
-let age = useStorage('age');
+import Quiz from '@/components/quiz/Quiz.vue'
+import {state} from '@/stores/quizStore.js'
 
 </script>
-
 <template>
   <main>
-    <p>What is your favourite food? <input type="text" v-model="food" /></p>
-    <p>How old are you? <input type="text" v-model="age"></p>
+    <Quiz :quiz="state" />
   </main>
 </template>
+
+<!--<script setup>-->
+<!--import TabbableTextarea from '@/components/TabbableTextarea.vue'-->
+<!--import { ref } from "vue";-->
+
+<!--let comment = ref('test value')-->
+
+<!--</script>-->
+
+<!--<template>-->
+<!--  <main>-->
+<!--    <form>-->
+<!--      <tabbable-textarea v-model="comment" style="width: 100%; height: 300px;" />-->
+<!--    </form>-->
+<!--  </main>-->
+<!--</template>-->
+<!--<script setup>-->
+<!--import { useStorage } from '@/composables/useStorage.js'-->
+
+<!--let food = useStorage('food');-->
+<!--let age = useStorage('age');-->
+
+<!--</script>-->
+
+<!--<template>-->
+<!--  <main>-->
+<!--    <p>What is your favourite food? <input type="text" v-model="food" /></p>-->
+<!--    <p>How old are you? <input type="text" v-model="age"></p>-->
+<!--  </main>-->
+<!--</template>-->
 
 <!--<script setup>-->
 <!--import {useFlash} from '@/composables/useFlash.js'-->
